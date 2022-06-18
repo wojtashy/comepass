@@ -1,8 +1,12 @@
 {
   "dependencies": {
     "babel-plugin-styled-components": "^2.0.7",
+    "gatsby-plugin-image": "^2.16.1",
+    "gatsby-plugin-sharp": "^4.16.1",
     "gatsby-plugin-styled-components": "^5.16.0",
+    "gatsby-source-filesystem": "^4.16.0",
     "gatsby-source-graphql": "^4.16.0",
+    "gatsby-transformer-sharp": "^4.16.0",
     "styled-components": "^5.3.5"
   }
 }
