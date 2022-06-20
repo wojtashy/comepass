@@ -224,3 +224,61 @@ pre tt:before,
 pre tt:after {
   content: none;
 }
+.main-menu{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  width: 100vw;
+  height: 100vh;
+  transition-duration: 0.3s;
+  z-index: 10;
+  background-color: #000;
+}
+.main-menu-is-hidden{
+  top: 0px;
+  right: 100vw;
+}
+.mobile-menu-button{
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  background-color: #000;
+  border-top: 2px solid white;
+  height: 60px;
+  width: 60px;
+  z-index: 100;
+  transition-duration: 0.3s;
+}
+.mobile-menu-button::after, .mobile-menu-button::before{
+  content: '';
+  position: absolute;
+  z-index: 100;
+  width: 60px;
+  height: 2px;
+  background-color: #FFF;
+  transition-duration: 0.3s;
+}
+.mobile-menu-button::before{
+  transform-origin: -1px 58px;
+}
+.mobile-menu-button::after{
+  transform-origin: 15px 19px;
+}
+.mobile-menu-button--hidden::after{
+  transform:  translateY(28px);
+}
+.mobile-menu-button--hidden::before{
+  transform: translateY(58px);
+}
+.mobile-menu-button--visible::after{
+  transform:  rotate(45deg)  translateY(28px);
+}
+.mobile-menu-button--visible::before{
+  transform: rotate(-45deg) translateY(58px);
+}
+.mobile-menu-button--visible{
+border-top: 2px solid #000;
+}
