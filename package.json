@@ -5,8 +5,9 @@
     "gatsby-plugin-sharp": "^4.16.1",
     "gatsby-plugin-styled-components": "^5.16.0",
     "gatsby-source-filesystem": "^4.16.0",
-    "gatsby-source-graphql": "^4.16.0",
+    "gatsby-source-graphql": "^4.17.0",
     "gatsby-transformer-sharp": "^4.16.0",
+    "graphql-compose": "^9.0.8",
     "styled-components": "^5.3.5"
   }
 }

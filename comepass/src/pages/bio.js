@@ -5,7 +5,7 @@ import Seo from "../components/seo"
 
 const MusicPage = () => (
   <Layout>
-    <Seo title="Comepass music" />
+    <Seo title="Bio" />
     To jest nasza strona o nas
   </Layout>
 )

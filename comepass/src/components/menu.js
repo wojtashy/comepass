@@ -7,7 +7,7 @@ import { StaticImage } from "gatsby-plugin-image"
 
 export function LogoMobile(){
     return (
-    <StaticImage src="../images/image00001.png"
+    <StaticImage src="../images/logo-comepass.png"
         height={100}
         width={100}
         className="logo"

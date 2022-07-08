@@ -1,15 +1,16 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
+    title: ``,
+    description: ``,
     author: `@gatsbyjs`,
-    siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
+    siteUrl: `https://comepass.com`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-image`,
     'gatsby-plugin-styled-components',
     `gatsby-plugin-sharp`,
+    
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -17,9 +18,24 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
-    
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
+
+    {
+      resolve: "gatsby-source-graphql",
+      options: {
+        // Arbitrary name for the remote schema Query type
+        typeName: "SWAPI",
+        // Field under which the remote schema will be accessible. You'll use this in your Gatsby query
+        fieldName: "swapi",
+        // Url to query from
+        url: "https://swapi-graphql.netlify.app/.netlify/functions/index",
+        createSchema: async () => {
+          const json = JSON.parse(
+            fs.readFileSync(`${__dirname}/introspection.json`)
+          )
+          return buildClientSchema(json.data)
+      },
+    },
+  }
   ],
 }
+ 
