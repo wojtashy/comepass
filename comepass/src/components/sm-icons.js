@@ -1,9 +1,7 @@
 import * as React from "react"
 import PropTypes from "prop-types"
 import { Link } from "gatsby"
-import Menu from "./menu"
 import { StaticImage } from "gatsby-plugin-image"
-import {facebookLogo} from "../images/facebook-white.png"
 
 const barStyle = {
     height: 180,
@@ -15,36 +13,58 @@ const barStyle = {
     boxShadow: `-3px 1px 7px -4px #FFF`,
     transform: 'translateY(10px)',
     display: 'flex',
-    justifyContent: 'space-around'
+    justifyContent: 'space-between',
+    flexDirection: 'column',
+    alignItems: 'center',
+    padding: 10,
+    zIndex: 5
 }
-const barElements=[
-    {
-        image: facebookLogo,
-        url: 'https://www.facebook.com/comepassband'
-    },
-    {
 
-    }
-]
+export function SocialMediaLogo (props){
+    console.log(props)
+    return (
+        <StaticImage src={props.imageUrl}
+        height={100}
+        width={100}
+        alt={props.alt}
+    ></StaticImage>
+    )
+}
+
+const smLogoStyle = {
+    height: 'auto',
+    width: '100%'
+}
 
 const SocialMediaIcons = () =>{
 
     return(
         <>
             <div style={barStyle}>
-                {barElements.map(e =>{
-                    <li>
-                        <a href={e.url}>
-                            <image src={e.image} alt='obrazek'></image>
+                
+                        <a href='https://tidal.com/browse/artist/28465999' target="_blank" rel="noopener noreferrer" className="sm-images-list_item">
+                            <StaticImage alt='tidal' style={smLogoStyle} src='../images/tidal-white.png'/>
+                        </a> 
+                        <a href='https://open.spotify.com/artist/5Ta2BXVfYW1o06F9zrCGjR' className="sm-images-list_item">
+                            <StaticImage alt='spotify' style={smLogoStyle} src='../images/white-spotify.png'/>
                         </a>
-                    </li>
-                    
-                })}
+                        <a href='https://www.instagram.com/comepass_official' className="sm-images-list_item">
+                            <StaticImage alt='instagram' style={smLogoStyle} src='../images/white-instagram.png'/>
+                        </a>
+                        <a href='https://www.facebook.com/comepassband' className="sm-images-list_item">
+                            <StaticImage alt='facebook' style={smLogoStyle} src='../images/facebook-white.png'/>
+                        </a>
+                        <a href='https://www.youtube.com/c/Comepass' className="sm-images-list_item">
+                            <StaticImage alt='youtube' style={smLogoStyle} src='../images/white-youtube.png'/>
+                        </a>
+
+                
             </div>
         </>
     )
 
 }
+
 
 export default SocialMediaIcons
 

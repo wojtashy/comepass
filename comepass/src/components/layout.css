@@ -283,3 +283,10 @@ pre tt:after {
 .mobile-menu-button--visible{
 border-top: 2px solid #000;
 }
+.sm-images-icon{
+  height: 50px;
+  width: 50px;
+}
+.sm-images-list_item *{
+  pointer-events: none;
+}
