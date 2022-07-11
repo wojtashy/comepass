@@ -7,7 +7,7 @@ const barStyle = {
     height: 180,
     width: 40,
     backgroundColor: '#000',
-    position: 'absolute',
+    position: 'fixed',
     right: 0,
     borderRadius: '7px 0px 0px 7px',
     boxShadow: `-3px 1px 7px -4px #FFF`,
