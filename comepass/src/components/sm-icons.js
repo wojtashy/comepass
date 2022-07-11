@@ -17,19 +17,9 @@ const barStyle = {
     flexDirection: 'column',
     alignItems: 'center',
     padding: 10,
-    zIndex: 5
+    zIndex: 5 
 }
 
-export function SocialMediaLogo (props){
-    console.log(props)
-    return (
-        <StaticImage src={props.imageUrl}
-        height={100}
-        width={100}
-        alt={props.alt}
-    ></StaticImage>
-    )
-}
 
 const smLogoStyle = {
     height: 'auto',

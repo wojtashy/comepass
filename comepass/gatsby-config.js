@@ -1,9 +1,9 @@
 module.exports = {
   siteMetadata: {
-    title: ``,
+    title: `Comepass`,
     description: ``,
     author: `@gatsbyjs`,
-    siteUrl: `https://comepass.com`,
+    siteUrl: `https://comepass.pl`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -22,18 +22,9 @@ module.exports = {
     {
       resolve: "gatsby-source-graphql",
       options: {
-        // Arbitrary name for the remote schema Query type
-        typeName: "SWAPI",
-        // Field under which the remote schema will be accessible. You'll use this in your Gatsby query
-        fieldName: "swapi",
-        // Url to query from
-        url: "https://swapi-graphql.netlify.app/.netlify/functions/index",
-        createSchema: async () => {
-          const json = JSON.parse(
-            fs.readFileSync(`${__dirname}/introspection.json`)
-          )
-          return buildClientSchema(json.data)
-      },
+        typeName: "Comepass",
+        fieldName: "Comepass",
+        url: "https://api-eu-central-1.graphcms.com/v2/cl3t7615vbhw401xkfyqsc3k0/master",
     },
   }
   ],
