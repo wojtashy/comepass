@@ -1,7 +1,7 @@
 :root {
   --border-radius: 4px;
-  --color-text: #333;
-  --color-primary: #7026b9;
+  --color-text: rgb(255, 255, 255);
+  --color-primary: #000000;
   --color-code-bg: #fff4db;
   --color-code: #8a6534;
   --back-main-color: #000;
@@ -289,4 +289,45 @@ border-top: 2px solid #000;
 }
 .sm-images-list_item *{
   pointer-events: none;
+}
+.about-section{
+  width: 100vw;
+  height: auto;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(15, 40px);
+  align-items: center;
+  justify-content: center;
+}
+.about-section-title{
+  margin: 0 auto;
+  grid-row: 1/3;
+  grid-column: 1/13;
+}
+.about-comepass_image{
+  grid-row: 2/4;
+  grid-column: 1/13;
+  transform: rotate(45deg);
+  height: 150px;
+  width: 150px;
+  margin: 0 auto;
+}
+.about-comepass-band_image{
+  grid-row: 4/8;
+  grid-column: 1/13;
+  height: 250px;
+  width: auto;
+  margin: 0 auto;
+}
+.about_comepass-description{
+  background-color: #16151557;
+  grid-row: 11/15;
+  grid-column: 2/12;
+  text-align: justify;
+  padding: 5px 10px 5px 10px;
+  border-radius: 13px;
+  margin: 0 auto;
+}
+.about_comepass-description p{
+  margin: 0 auto;
 }
