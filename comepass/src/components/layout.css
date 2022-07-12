@@ -2,7 +2,7 @@
   --border-radius: 4px;
   --color-text: rgb(255, 255, 255);
   --color-primary: #000000;
-  --color-code-bg: #fff4db;
+  --color-code-bg: #1D1C1C;
   --color-code: #8a6534;
   --back-main-color: #000;
   --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial,
@@ -320,14 +320,80 @@ border-top: 2px solid #000;
   margin: 0 auto;
 }
 .about_comepass-description{
-  background-color: #16151557;
   grid-row: 11/15;
   grid-column: 2/12;
-  text-align: justify;
-  padding: 5px 10px 5px 10px;
+  text-align:left;
+  padding: 10px;
   border-radius: 13px;
   margin: 0 auto;
+  background: rgb(22,21,21);
+  box-shadow: rgb(46, 46, 46) 3 3 3 3;
+background: linear-gradient(142deg, rgba(22,21,21,1) 51%, rgba(88,227,255,0.2553396358543417) 100%);
+-webkit-box-shadow: -4px -2px 2px 0px rgba(215, 219, 255, 1);
+-moz-box-shadow: -4px -2px 2px 0px rgba(215, 219, 255, 1);
+box-shadow: -4px -2px 2px 0px rgba(215, 219, 255, 1);
 }
 .about_comepass-description p{
   margin: 0 auto;
+}
+.events__component{
+  padding: 30px 10px 30px 10px;
+}
+.events__list{
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+.event__card{
+  margin-top: 20px;
+  background-color: var(--color-code-bg);
+  padding: 10px;
+  color: var(--color-text);
+  display: grid;
+  grid-template-columns: repeat(2,50%);
+  grid-template-rows: repeat(10,10%);
+  min-height: 250px;
+  border-radius: 3px;
+  background: linear-gradient(135deg, rgba(29,28,28,1) 75%, rgba(88,227,255,0.2553396358543417) 100%);
+
+}
+.event__card--info__button{
+  background-color: var(--color-text);
+  color: var(--back-main-color);
+  padding: 12px;
+  grid-column: 2/3;
+  grid-row: 8/10;
+  height: 45px;
+  width: 75px;
+  justify-self: center;
+  text-decoration: none;
+  border-radius: 5px;
+}
+.event__card__image{
+  max-height: 150px;
+  width: auto;
+  grid-row: 3/5;
+  grid-column: 2/3;
+  align-self: center;
+  justify-self: flex-end;
+  border-radius: 7px;
+}
+.events__card__title{
+  grid-column: 1/3;
+  grid-row: 1/3;
+  z-index: 5;
+  padding: 0px 0px 0px 5px;
+  font-size: 1.4rem;
+  font-weight: bold;
+  background: linear-gradient(143deg, rgba(29,28,28,1) 50%, rgb(103, 113, 116) 100%);
+  height: fit-content;
+  border-radius: 0px 4px 0px 0px;
+}
+.events__card__description{
+  grid-column: 1/2;
+  grid-row: 4/10;
+}
+.events__card_date{
+  grid-column: 2/3;
+  grid-row: 6/7;
 }

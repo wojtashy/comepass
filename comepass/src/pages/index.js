@@ -5,7 +5,7 @@ import { StaticQuery, graphql } from "gatsby"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import backgroundVideo from '../videos/bg-video-reason.mp4'
-
+import EventsList from "../components/eventsList"
 const utmParameters = `?utm_source=starter&utm_medium=start-page&utm_campaign=default-starter`
 
 const AboutUs = () =>{
@@ -55,7 +55,8 @@ const IndexPage = () => (
 
     </div>
     <AboutUs/>
+    <EventsList/>
   </Layout>
 )
 
-export default IndexPage
+export default IndexPage;
