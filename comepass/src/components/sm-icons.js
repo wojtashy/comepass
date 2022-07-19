@@ -4,26 +4,28 @@ import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 
 const barStyle = {
-    height: 180,
-    width: 40,
+    height: 290,
+    width: 75,
     backgroundColor: '#000',
     position: 'fixed',
     right: 0,
     borderRadius: '7px 0px 0px 7px',
     boxShadow: `-3px 1px 7px -4px #FFF`,
-    transform: 'translateY(10px)',
     display: 'flex',
     justifyContent: 'space-between',
     flexDirection: 'column',
     alignItems: 'center',
     padding: 10,
-    zIndex: 5 
+    zIndex: 5,
+    a:{
+        margin: '0 auto',
+    }
 }
 
 
 const smLogoStyle = {
     height: 'auto',
-    width: '100%'
+    width: '80%'
 }
 
 const SocialMediaIcons = () =>{
