@@ -4,8 +4,14 @@ import Layout from "../components/layout"
 import Seo from "../components/seo"
 
 const MusicBar = () => {
-  return(
-    <div>
+   const [lyricsState,setLyricsState] = React.useState('hidden');
+
+   const handleLyricsView = ()=>{
+    lyricsState == 'hidden' ? setLyricsState('visible') : setLyricsState('hidden')
+   }
+  
+   return(
+    <div className="tracks__bar">
       <StaticQuery
         query={graphql`query {
   Comepass {
@@ -23,14 +29,13 @@ const MusicBar = () => {
 }
 
         `}render={data=>(data.Comepass.bandtracks.map(track=>(
-          <>
-          <h2>{track.songTitle}</h2>
-            <code>
-            {track.trackLyrics.html}
-            </code>
-          <img src={track.trackImage.url} alt='comepass song'/>
-          {console.log(data)}
-          </>
+          <div className="tracks_bar-track">
+          <h2 className="tracks_bar-track-title">{track.songTitle}</h2> 
+          <img src={track.trackImage.url} className="tracks_bar-track-image" alt='comepass song'/>
+
+          <div onClick={handleLyricsView} className={`tracks_bar-lyrics-${lyricsState} tracks_bar-lyrics`} dangerouslySetInnerHTML={{__html: `${track.trackLyrics.html}`}} ></div> 
+
+          </div>
           
     )))}
        ></StaticQuery>

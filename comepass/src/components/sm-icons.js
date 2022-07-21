@@ -4,22 +4,7 @@ import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 
 const barStyle = {
-    height: 290,
-    width: 75,
-    backgroundColor: '#000',
-    position: 'fixed',
-    right: 0,
-    borderRadius: '7px 0px 0px 7px',
-    boxShadow: `-3px 1px 7px -4px #FFF`,
-    display: 'flex',
-    justifyContent: 'space-between',
-    flexDirection: 'column',
-    alignItems: 'center',
-    padding: 10,
-    zIndex: 5,
-    a:{
-        margin: '0 auto',
-    }
+    
 }
 
 
@@ -28,26 +13,26 @@ const smLogoStyle = {
     width: '80%'
 }
 
-const SocialMediaIcons = () =>{
+const SocialMediaIcons = (props) =>{
 
     return(
         <>
-            <div style={barStyle}>
+            <div className={`sm-icons-${props.position}-bar`}>
                 
                         <a href='https://tidal.com/browse/artist/28465999' target="_blank" rel="noopener noreferrer" className="sm-images-list_item">
-                            <StaticImage alt='tidal' style={smLogoStyle} src='../images/tidal-white.png'/>
+                            <StaticImage alt='tidal'  src='../images/tidal-white.png'/>
                         </a> 
                         <a href='https://open.spotify.com/artist/5Ta2BXVfYW1o06F9zrCGjR' className="sm-images-list_item">
-                            <StaticImage alt='spotify' style={smLogoStyle} src='../images/white-spotify.png'/>
+                            <StaticImage alt='spotify'  src='../images/white-spotify.png'/>
                         </a>
                         <a href='https://www.instagram.com/comepass_official' className="sm-images-list_item">
-                            <StaticImage alt='instagram' style={smLogoStyle} src='../images/white-instagram.png'/>
+                            <StaticImage alt='instagram'  src='../images/white-instagram.png'/>
                         </a>
                         <a href='https://www.facebook.com/comepassband' className="sm-images-list_item">
-                            <StaticImage alt='facebook' style={smLogoStyle} src='../images/facebook-white.png'/>
+                            <StaticImage alt='facebook'  src='../images/facebook-white.png'/>
                         </a>
                         <a href='https://www.youtube.com/c/Comepass' className="sm-images-list_item">
-                            <StaticImage alt='youtube' style={smLogoStyle} src='../images/white-youtube.png'/>
+                            <StaticImage alt='youtube'  src='../images/white-youtube.png'/>
                         </a>
 
                 

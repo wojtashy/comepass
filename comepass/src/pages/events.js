@@ -6,7 +6,8 @@ import Seo from "../components/seo"
 const MusicPage = () => (
   <Layout>
     <Seo title="Comepass music" />
-      <EventsList></EventsList>
+    <h1>Events</h1>
+      <EventsList limit={0}></EventsList>
     </Layout>
 )
 

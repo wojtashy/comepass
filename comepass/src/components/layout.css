@@ -347,8 +347,10 @@ box-shadow: -4px -2px 2px 0px rgba(215, 219, 255, 1);  */
   display: flex;
   justify-content: space-between;
   flex-direction: column;
+  align-items: center;
 }
 .event__card{
+  width: 90vw;
   margin-top: 20px;
   background-color: var(--color-code-bg);
   padding: 10px;
@@ -389,7 +391,7 @@ box-shadow: -4px -2px 2px 0px rgba(215, 219, 255, 1);  */
   padding: 0px 0px 0px 5px;
   font-size: 1.4rem;
   font-weight: bold;
-  background: linear-gradient(143deg, rgba(29,28,28,1) 50%, rgb(103, 113, 116) 100%);
+  background: linear-gradient(13deg, rgba(29,28,28,1) 70%, rgb(103, 113, 116) 100%);
   height: fit-content;
   border-radius: 0px 4px 0px 0px;
 }
@@ -468,4 +470,77 @@ box-shadow: -4px -2px 2px 0px rgba(215, 219, 255, 1);  */
     transform: rotate(360deg);
     border-top: 7px solid #333231;
   }
+}
+.tracks_bar-track{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.tracks_bar-track-title{
+  font-size: 2rem;
+}
+.tracks_bar-track-image{
+  max-width: 80vw;
+}
+.tracks_bar-lyrics{
+  background-color: #1D1C1C;
+  padding: 10px;
+  -webkit-box-shadow: inset 0px -20px 41px -11px rgb(0, 0, 0);
+  -moz-box-shadow: inset 0px -20px 41px -11px rgb(0, 0, 0);
+  box-shadow: inset 0px -20px 41px -11px rgb(0, 0, 0);
+  border-radius: 7px;
+}
+.tracks_bar-lyrics-hidden{
+  height: 70px;
+  overflow: hidden;
+}
+.tracks_bar-lyrics-visible{
+  height: auto;
+}
+footer{
+  background-color: #1b1b1b;
+  min-height: 120px;
+}
+.sm-icons-static-bar{
+  height: 290px;
+  width: 75px;
+  background-color: #000;
+  position: fixed;
+    right: 0;
+    border-radius: 7px 0px 0px 7px;
+    box-shadow: -3px 1px 7px -4px #FFF;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    z-index: 5;
+}
+.sm-icons-static-bar a{
+  margin: 0 auto;
+}
+.sm-icons-footer-bar a{
+  margin: 0 auto;
+}
+.sm-icons-footer-bar{
+  height: 75px;
+  width: 290px;
+  background-color: #000;
+    right: 0;
+    border-radius: 7px 0px 0px 7px;
+    box-shadow: -3px 1px 7px -4px #FFF;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    padding: 10px;
+}
+.sm-icons-static-bar a div div img{
+  height: auto;
+  width: 80%;
+}
+.sm-icons-footer-bar a div div img{
+  width: auto;
+  height: 80%;
 }

@@ -55,7 +55,7 @@ const IndexPage = () => (
 
     </div>
     <AboutUs/>
-    <EventsList/>
+    <EventsList limit={1}/>
   </Layout>
 )
 

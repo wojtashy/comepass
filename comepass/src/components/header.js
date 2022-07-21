@@ -30,7 +30,9 @@ const Header = ({ siteTitle }) => (
       justifyContent: 'center'
     }}
   >
-   <LogoHeader></LogoHeader>
+   <Link to="/">
+    <LogoHeader></LogoHeader>
+   </Link>
     <Menu/>
   </header>
 )
