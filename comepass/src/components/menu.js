@@ -31,7 +31,16 @@ const Menu = () =>{
         color: '#FFF',
         textDecoration: 'none'
     }
-    const MenuChangeHandler = () => (menuState === 'hidden' ? setMenuState('visible') : setMenuState('hidden'));
+    const MenuChangeHandler = () => {
+        if (menuState === 'hidden') 
+         {
+            setMenuState('visible') 
+            document.querySelector('html').style.overflow = 'hidden';
+        }else {
+            setMenuState('hidden')
+            document.querySelector('html').style.overflow = 'scroll';
+    }
+    };
     const [menuState,setMenuState] = React.useState('hidden');
     return(
         
@@ -42,19 +51,19 @@ const Menu = () =>{
         </div>
         <div className={`main-menu main-menu-is-${menuState}`}>
             <ul style={listStyle}>
-                <Link style={listItemStyle} to={'/music'}>
+                <Link style={listItemStyle} to={'/music'} onClick={MenuChangeHandler}>
                     <li>MUSIC</li>
                 </Link>
-                <Link style={listItemStyle} to={'/bio'}>
+                <Link style={listItemStyle} to={'/bio'} onClick={MenuChangeHandler}>
                     <li>BIO</li>
                 </Link>
-                <Link style={listItemStyle} to={'/'}>
+                <Link style={listItemStyle} to={'/'} onClick={MenuChangeHandler}>
                 <LogoMobile/>
                 </Link>
-                <Link style={listItemStyle} to={'/merch'}>
+                <Link style={listItemStyle} to={'/merch'} onClick={MenuChangeHandler}>
                 <li>MERCH</li>
                 </Link>
-                <Link style={listItemStyle} to={'/events'}>
+                <Link style={listItemStyle} to={'/events'} onClick={MenuChangeHandler}>
                 <li>EVENTS</li>
                 </Link>
 
