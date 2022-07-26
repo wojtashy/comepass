@@ -37,6 +37,11 @@ const Layout = ({ children }) => {
         <footer>
           <p>social media</p>
         <SocialMediaIcons position={'footer'}></SocialMediaIcons>
+          <div className="footer__decoration"></div>
+          <div className="footer__decoration"></div>
+          <div className="footer__decoration"></div>
+          <div className="footer__decoration"></div>
+          <div className="footer__decoration"></div>
         </footer>
       </div>
     </>

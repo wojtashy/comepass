@@ -10,7 +10,7 @@ const barStyle = {
 
 const smLogoStyle = {
     height: 'auto',
-    width: '80%'
+    maxWidth: '100%'
 }
 
 const SocialMediaIcons = (props) =>{
