@@ -18,7 +18,7 @@ const SocialMediaIcons = (props) =>{
     return(
         <>
             <div className={`sm-icons-${props.position}-bar`}>
-                
+                       { props.position === 'static' ? <div className="sm__icons--toggle__button"></div> : null }
                         <a href='https://tidal.com/browse/artist/28465999' target="_blank" rel="noopener noreferrer" className="sm-images-list_item">
                             <StaticImage alt='tidal'  src='../images/tidal-white.png'/>
                         </a> 

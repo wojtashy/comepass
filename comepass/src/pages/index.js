@@ -12,8 +12,10 @@ const AboutUs = () =>{
 
   return(
     <div className="about-section">
-      <h1 className="about-section-title">About</h1>
-      <StaticImage src='../images/comepass_white.png' alt='comepass' className="about-comepass_image"/>
+      <div className="about-section-title-container">
+        <h1 className="about-section-title">About</h1>
+        <StaticImage src='../images/comepass_white.png' alt='comepass' className="about-comepass_image"/>
+      </div>
       <StaticImage src='../images/comepass_band.png' alt='comepass band' className="about-comepass-band_image"/>
       <StaticQuery query={graphql`query  {
   Comepass {

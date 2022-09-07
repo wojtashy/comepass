@@ -321,6 +321,8 @@ border-top: 2px solid #000;
 }
 .about-comepass-band_image{
   margin: 0 auto;
+  max-width: 900px;
+
 }
 .about_comepass-description{
   margin: 0px 3rem 0px 3rem;
@@ -608,7 +610,7 @@ footer div:nth-of-type(6){
     flex-direction: row;
     align-items: center;
     padding: 10px;
-    z-index: 10;
+    z-index: 8;
     position: absolute;
     left: 10vw;
     top: 8vh;
@@ -621,11 +623,43 @@ footer div:nth-of-type(6){
   max-height: 40px;
   width: auto;
 }
+.sm__icons--toggle__button{
+  height: 60px;
+  width: 45px;
+  position: absolute;
+  left: -45px;
+  top: calc(50% - 38px);
+  box-shadow: inset 3px 0px 7px -4px #FFF;
+  border-radius: 6px 0px 0px 6px;
+}
+.sm__icons--toggle__button::before{
+  content: '';
+  width: 5px;
+  border-radius: 2px;
+  height: 25px;
+  background-color: #FFF;
+  position: absolute;
+  top: 10.5px;
+  right: 20px;
+  transform: rotate(45deg);
+}
+.sm__icons--toggle__button::after{
+  content: '';
+  width: 5px;
+  border-radius: 2px;
+  height: 25px;
+  background-color: rgb(255, 255, 255);
+  position: absolute;
+  top: 25px;
+  right: 20px;
+  transform: rotate(-45deg);
+}
+
 footer p{ 
   position: absolute;
   left: 15vw;
   margin: 10px;
-  z-index: 10;
+  z-index: 8;
 }
 @media only screen and(min-width: 800px) {
   .events__list{
