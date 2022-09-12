@@ -57,6 +57,7 @@ const IndexPage = () => (
 
     </div>
     <AboutUs/>
+    <h2 className="events__list__title">Gdzie gramy</h2>
     <EventsList limit={1}/>
   </Layout>
 )

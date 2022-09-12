@@ -2,6 +2,7 @@ import * as React from "react"
 import PropTypes from "prop-types"
 import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
+import { useState } from "react"
 
 const barStyle = {
     
@@ -13,12 +14,19 @@ const smLogoStyle = {
     maxWidth: '100%'
 }
 
-const SocialMediaIcons = (props) =>{
 
+
+const SocialMediaIcons = (props) =>{
+    
+    const [SideBarState,SetSideBarState] = useState('visible');
+
+    const HandleBarPosition = () => {
+            SideBarState === 'visible' ? SetSideBarState('hidden') : SetSideBarState('visible')
+    }
     return(
         <>
-            <div className={`sm-icons-${props.position}-bar`}>
-                       { props.position === 'static' ? <div className="sm__icons--toggle__button"></div> : null }
+            <div className={`sm-icons-${props.position}-bar sm__icons--${SideBarState}`}>
+                       { props.position === 'static' ? <div className={`sm__icons--toggle__button sm__icons__button--${SideBarState}`} onClick={HandleBarPosition}></div> : null }
                         <a href='https://tidal.com/browse/artist/28465999' target="_blank" rel="noopener noreferrer" className="sm-images-list_item">
                             <StaticImage alt='tidal'  src='../images/tidal-white.png'/>
                         </a> 

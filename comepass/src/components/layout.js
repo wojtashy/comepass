@@ -35,7 +35,12 @@ const Layout = ({ children }) => {
       <div
         style={{
           margin: `0 auto`,
-
+          minHeight: `calc(100vh - 120px)`,
+          display: `flex`,
+          justifyContent: `space-between`,
+          flexDirection: `column`,
+          alignItems: `center`,
+          width: `100vw`
         }}
       >
         <main>{children}</main>

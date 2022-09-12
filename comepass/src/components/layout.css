@@ -340,6 +340,9 @@ box-shadow: -4px -2px 2px 0px rgba(215, 219, 255, 1);  */
 .about_comepass-description p{
   margin: 0 auto;
 }
+.events__list__title{
+  text-align: center;
+}
 .events__component{
   padding: 30px 10px 30px 10px;
   width: 100vw;
@@ -543,6 +546,7 @@ footer{
   overflow: hidden;
   position: relative;
   font-size: 1.3rem;
+  width: 100vw;
 }
 .footer__decoration{
   width: 130vw;
@@ -577,12 +581,17 @@ footer div:nth-of-type(6){
   bottom: 7vh;
   left: 0;
 }
+.sm__icons--visible{
+  right: 0px;
+}
+.sm__icons--hidden{
+  right: -80px;
+}
 .sm-icons-static-bar{
   height: 290px;
   width: 75px;
   background-color: #000;
   position: fixed;
-    right: 0;
     border-radius: 7px 0px 0px 7px;
     box-shadow: -3px 1px 7px -4px #FFF;
     display: flex;
@@ -591,6 +600,7 @@ footer div:nth-of-type(6){
     align-items: center;
     padding: 10px;
     z-index: 5;
+    transition-duration: 0.4s;
 }
 .sm-icons-static-bar a{
   margin: 0 auto;
@@ -641,9 +651,11 @@ footer div:nth-of-type(6){
   position: absolute;
   top: 10.5px;
   right: 20px;
-  transform: rotate(45deg);
+  pointer-events: none;
+  transition-duration: 0.4s;
 }
 .sm__icons--toggle__button::after{
+  pointer-events: none;
   content: '';
   width: 5px;
   border-radius: 2px;
@@ -652,21 +664,34 @@ footer div:nth-of-type(6){
   position: absolute;
   top: 25px;
   right: 20px;
+  transition-duration: 0.4s;
+}
+.sm__icons__button--visible::after{
+  transform: rotate(45deg);
+}
+.sm__icons__button--visible::before{
   transform: rotate(-45deg);
 }
-
+.sm__icons__button--hidden::after{
+  transform: rotate(-45deg);
+}
+.sm__icons__button--hidden::before{
+  transform: rotate(45deg);
+}
+header{
+  box-shadow: 0px 0px 8px -1px #fff;
+}
 footer p{ 
   position: absolute;
   left: 15vw;
   margin: 10px;
   z-index: 8;
 }
-@media only screen and(min-width: 800px) {
+@media only screen and (min-width: 800px) {
   .events__list{
-    display: none;
   }
   .event__card{
-    width: 90vw;
+    max-width: 720px;
     margin-top: 20px;
     background-color: var(--color-code-bg);
     padding: 10px;
