@@ -35,10 +35,10 @@ const Menu = () =>{
         if (menuState === 'hidden') 
          {
             setMenuState('visible') 
-            document.querySelector('html').style.overflow = 'hidden';
+            document.querySelector('html').style.overflowY = 'hidden';
         }else {
             setMenuState('hidden')
-            document.querySelector('html').style.overflow = 'scroll';
+            document.querySelector('html').style.overflowY = 'scroll';
     }
     };
     const [menuState,setMenuState] = React.useState('hidden');

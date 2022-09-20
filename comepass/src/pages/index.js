@@ -6,8 +6,7 @@ import Layout from "../components/layout"
 import Seo from "../components/seo"
 import backgroundVideo from '../videos/bg-video-reason.mp4'
 import EventsList from "../components/eventsList"
-const utmParameters = `?utm_source=starter&utm_medium=start-page&utm_campaign=default-starter`
-
+import insta from "../images/white-instagram.png"
 const AboutUs = () =>{
 
   return(
@@ -18,16 +17,32 @@ const AboutUs = () =>{
       </div>
       <StaticImage src='../images/comepass_band.png' alt='comepass band' className="about-comepass-band_image"/>
       <StaticQuery query={graphql`query  {
-  Comepass {
-    bandInfo(where: {id: "cl5h782h585qe0cuif9e5kyie"}) {
-      bandDescription
+  
+    Comepass {
+      band_Members {
+        memberInstagram
+        memberName
+        memberRole
+      }
+      bandInfos {
+        bandDescription
+      }
     }
-  }
-}`} render={data=>(
+  }`} render={data=>(
   <div className="about_comepass-description">
     <p>
-      {data.Comepass.bandInfo.bandDescription}
+      {data.Comepass.bandInfos[0].bandDescription}
     </p>
+    <ul>
+      {data.Comepass.band_Members.map( e =>(
+        <a href={e.memberInstagram} target="_blank">
+        <li>
+          <img src={insta}/>
+          <p>{e.memberName + " - " + e.memberRole}</p>
+        </li>
+        </a>
+        ))}
+    </ul>
   </div>
 )}/>
     </div>
