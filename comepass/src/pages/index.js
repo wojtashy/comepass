@@ -33,14 +33,11 @@ const AboutUs = () =>{
     <p>
       {data.Comepass.bandInfos[0].bandDescription}
     </p>
-    <ul>
+    <ul className="about__comepass__list">
       {data.Comepass.band_Members.map( e =>(
-        <a href={e.memberInstagram} target="_blank">
-        <li>
-          <img src={insta}/>
-          <p>{e.memberName + " - " + e.memberRole}</p>
+        <li className="about__comepass--member">
+          <p>{e.memberName}</p>
         </li>
-        </a>
         ))}
     </ul>
   </div>
