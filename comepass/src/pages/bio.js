@@ -27,7 +27,7 @@ const MusicPage = () => (
           <div className="bio__container">
             <p className="bio__card__description">{data.Comepass.bandInfos[1].extendedBandDescription}</p>
             <h1 className="bio__team__title">Skład zespołu</h1>
-              <div>
+              <div className="bio__cards__container">
               {data.Comepass.band_Members.map(e=>(
                 <div className="bio__member__card">
                   <img className="bio__member__photo" src={e.photo.url}/>

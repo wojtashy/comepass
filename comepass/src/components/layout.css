@@ -763,17 +763,18 @@ footer p{
   margin-bottom: 5vh;
 }
 .bio__card__description{
-  background-color: rgba(255,255,255,0.03);
+  background-color: rgba(26,26,26);
   margin: 5vh 4vw 0px 4vw;
   padding: 8px;
-  line-height: 1.4em;
+  line-height: 1.7em;
   border-radius: 5px;
-  box-shadow:  3px 3px 5px -2px #fff;
+  box-shadow:  28px 19px 0px -1px #ffffff45;;
 }
 .bio__team__title{
   margin-top: 5vh;
 }
 .bio__member__card{
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -784,6 +785,29 @@ footer p{
   overflow: hidden;
   box-shadow: 0px 0px 4px 2px #fff;
 }
+.bio__member__card::after{
+  content: '';
+  position: absolute;
+  bottom: 0px;
+  left: 40px;
+  width: 0px;
+  height: 0px;
+  border-left: 350px solid transparent;
+  border-right: 85px solid transparent;
+  border-bottom: 55px solid #111111;
+}
+.bio__member__card::before{
+  content: '';
+  position: absolute;
+  bottom: 114px;
+  left: -165px;
+  width: 0px;
+  height: 0px;
+  border-right: 350px solid transparent;
+  border-left: 85px solid transparent;
+  border-top: 55px solid #111111;
+}
+
 .bio__member__photo{
   max-width: 70vw;
   max-height: 50vh;
@@ -809,6 +833,7 @@ justify-content: flex-start;
 align-items: center;
 flex-direction: row;
 margin-bottom: 25px;
+text-decoration: none;
 }
 .bio__instagram__icon{
   height: 30px;
@@ -828,4 +853,11 @@ margin-bottom: 25px;
 .about__comepass__list{
   list-style: none;
   margin: 5px 0px 0px 5px;
+}
+.bio__cards__container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
 }
