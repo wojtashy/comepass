@@ -491,11 +491,12 @@ box-shadow: -4px -2px 2px 0px rgba(215, 219, 255, 1);  */
 .tracks__container{
   display: flex;
   width: 100vw;
-  align-items: center;
+  align-items: flex-start;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around;
   margin-top: 40px;
+  column-gap: 45px;
 }
 .music__title{
   margin-left: 20vw;
@@ -505,9 +506,11 @@ box-shadow: -4px -2px 2px 0px rgba(215, 219, 255, 1);  */
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
-  max-width: 300px;
-  background: linear-gradient(340deg, rgba(29,28,28,1) 40%, rgb(103, 113, 116) 100%);
+  flex-direction: row;
+  column-gap: 30px;
+  max-width: 350px;
+  background-color: #222222;
+  box-shadow: 0px 0px 4px 2px #fff;
   border-radius: 10px;
   position: relative;
   margin-bottom: 30px;
@@ -520,10 +523,8 @@ box-shadow: -4px -2px 2px 0px rgba(215, 219, 255, 1);  */
   color: #eeeeee;
 }
 .tracks_bar-track-image{
-  position: absolute;
   height: 106px;
-  top: 4px;
-  right: 0px;
+  margin: 0 15px 0 0;
 }
 .track__card--smIcons{
   width: 35px;
@@ -535,7 +536,7 @@ box-shadow: -4px -2px 2px 0px rgba(215, 219, 255, 1);  */
   justify-content: space-between;
   align-items: center;
   flex-direction: row;
-  width: 50%;
+  width: 150px;
   align-self: flex-start;
   margin-left: 20px;
   margin-bottom: 15px;

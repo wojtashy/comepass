@@ -70,7 +70,42 @@ const IndexPage = () => (
     </div>
     <AboutUs/>
     <h2 className="events__list__title">Gdzie gramy</h2>
-    <EventsList limit={1}/>
+    <StaticQuery 
+    query={graphql`
+    {
+      Comepass {
+        events(where: {landingPage: true}) {
+          eventUrl
+          eventTitle
+          eventDate
+          eventDescription
+          eventPhoto {
+            url
+          }
+          landingPage
+        }
+      }
+    }
+    `}render={data=>(
+      data.Comepass.events.map( (event,i)=>(
+          <div className="event__card" key={i} >
+              <p className="events__card__title">
+                  {event.eventTitle} 
+              </p>
+              <h3 className="events__card_date">
+                  Data: {event.eventDate}
+              </h3>
+              <p className="events__card__description">
+                  {event.eventDescription}
+              </p>
+              <a href={event.eventUrl} rel="noopener" className="event__card--info__button">
+                  Więcej
+              </a>
+              
+              <img alt='event image' src={event.eventPhoto.url} className="event__card__image"/>
+          </div>
+      ))
+  )}/>
   </Layout>
 )
 
